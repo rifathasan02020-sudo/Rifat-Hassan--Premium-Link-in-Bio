@@ -64,7 +64,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const BANNER_IMAGES = [
-  'https://i.ibb.co.com/C5TWrH57/20260211-225732.jpg',
+  'https://i.ibb.co.com/5Wm4xS7K/In-Shot-20260212-030718757.jpg',
   'https://i.ibb.co.com/NgvWMtBR/bb4d6e504438be83922dc6627c6f4f5e.jpg',
   'https://i.ibb.co.com/tTNVrDZK/c77527b1ec040922e41e0d66e2d7da64.jpg'
 ];

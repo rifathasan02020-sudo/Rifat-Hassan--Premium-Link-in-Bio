@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-[#050505] overflow-x-hidden select-none cursor-default">
-      {/* Banner Section */}
+      {/* Banner Section - Reverted to original taller height: 45vh and 350px min-height */}
       <div className="relative w-full h-[45vh] min-h-[350px] overflow-hidden">
         {BANNER_IMAGES.map((img, index) => (
           <div
@@ -29,6 +29,11 @@ const App: React.FC = () => {
               alt="Banner"
               className="w-full h-full object-cover object-top"
             />
+            {/* Specific tint for the second image (index 1) */}
+            {index === 1 && (
+              <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+            )}
+            
             {(index === 0 || index === 1) && (
               <div 
                 className="absolute inset-0 pointer-events-none"
@@ -52,7 +57,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* Links Section - Reduced margin-top from mt-20 to mt-10 to bring cards higher up */}
+      {/* Links Section */}
       <div className="w-full max-w-[440px] flex flex-col gap-4 px-6 pb-24 mt-10">
         {SOCIAL_LINKS.map((link) => (
           <SocialButton key={link.id} link={link} />
