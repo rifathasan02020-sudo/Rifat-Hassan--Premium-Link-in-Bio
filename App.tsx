@@ -14,7 +14,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <main className="min-h-screen w-full flex flex-col items-center bg-[#050505] overflow-x-hidden">
+    <main className="min-h-screen w-full flex flex-col items-center bg-[#050505] overflow-x-hidden select-none cursor-default">
       {/* Banner Section */}
       <div className="relative w-full h-[45vh] min-h-[350px] overflow-hidden">
         {BANNER_IMAGES.map((img, index) => (
@@ -43,17 +43,17 @@ const App: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]"></div>
         
         <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-8">
-          <h1 className="text-4xl md:text-5xl font-premium font-normal tracking-[0.18em] text-white mb-3 uppercase text-center px-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-premium font-normal tracking-[0.25em] text-white mb-3 uppercase text-center px-4">
             {PROFILE_NAME}
           </h1>
-          <p className="text-[11px] uppercase tracking-[0.5em] text-zinc-500 font-semibold opacity-90">
+          <p className="text-[10px] uppercase tracking-[0.5em] text-zinc-500 font-semibold opacity-90">
             OFFICIAL LINKS
           </p>
         </div>
       </div>
 
-      {/* Links Section */}
-      <div className="w-full max-w-[440px] flex flex-col gap-4 px-6 pb-24 mt-4">
+      {/* Links Section - Reduced margin-top from mt-20 to mt-10 to bring cards higher up */}
+      <div className="w-full max-w-[440px] flex flex-col gap-4 px-6 pb-24 mt-10">
         {SOCIAL_LINKS.map((link) => (
           <SocialButton key={link.id} link={link} />
         ))}
