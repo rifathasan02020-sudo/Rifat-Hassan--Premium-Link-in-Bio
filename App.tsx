@@ -14,8 +14,8 @@ const App: React.FC = () => {
 
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-[#050505] pb-24">
-      {/* Banner Section */}
-      <div className="relative w-full h-[60vh] md:h-[65vh] overflow-hidden">
+      {/* Banner Section - Increased height slightly to satisfy request */}
+      <div className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
         {BANNER_IMAGES.map((img, index) => (
           <div
             key={img}
@@ -36,8 +36,8 @@ const App: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-[#050505]"></div>
       </div>
 
-      {/* Profile Header */}
-      <div className="flex flex-col items-center z-10 px-4 -mt-28 mb-24 text-center">
+      {/* Profile Header - Adjusted negative margin for the slightly larger banner */}
+      <div className="flex flex-col items-center z-10 px-4 -mt-28 mb-20 text-center">
         {/* Name - font-bold for impact. Added mb-3 for a slight gap. */}
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.5em] text-white mb-3 uppercase drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]">
           {PROFILE_NAME}
