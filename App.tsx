@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { SOCIAL_LINKS, BANNER_IMAGES, PROFILE_NAME } from './constants';
-import SocialButton from './components/SocialButton';
+import { SOCIAL_LINKS, BANNER_IMAGES, PROFILE_NAME } from './constants.tsx';
+import SocialButton from './components/SocialButton.tsx';
 
 const App: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-[#050505] overflow-x-hidden">
-      {/* Banner Section - Reduced height from 60vh to 45vh and min-h from 450px to 350px */}
+      {/* Banner Section */}
       <div className="relative w-full h-[45vh] min-h-[350px] overflow-hidden">
         {BANNER_IMAGES.map((img, index) => (
           <div
@@ -29,7 +29,6 @@ const App: React.FC = () => {
               alt="Banner"
               className="w-full h-full object-cover object-top"
             />
-            {/* Vignette effect for the first two images */}
             {(index === 0 || index === 1) && (
               <div 
                 className="absolute inset-0 pointer-events-none"
@@ -41,10 +40,8 @@ const App: React.FC = () => {
           </div>
         ))}
         
-        {/* Deep dark overlay at the bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]"></div>
         
-        {/* Name and Subtitle overlaid */}
         <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-8">
           <h1 className="text-4xl md:text-5xl font-premium font-normal tracking-[0.18em] text-white mb-3 uppercase text-center px-4">
             {PROFILE_NAME}
@@ -62,7 +59,6 @@ const App: React.FC = () => {
         ))}
       </div>
 
-      {/* Subtle Footer */}
       <footer className="mt-auto pb-8">
         <p className="text-[9px] uppercase tracking-[0.4em] text-zinc-800 font-bold">
           Rifat Hassan &copy; {new Date().getFullYear()}

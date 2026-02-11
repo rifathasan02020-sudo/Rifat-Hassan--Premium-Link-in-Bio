@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { SocialLink } from './types';
+import { SocialLink } from './types.ts';
 
-// Custom SVG components for a perfect "no-background" white look
 const BrandIcons = {
   Youtube: () => (
     <svg viewBox="0 0 24 24" fill="white" className="w-10 h-10">
