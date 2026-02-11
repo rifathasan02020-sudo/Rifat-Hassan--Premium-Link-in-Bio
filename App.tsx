@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { SOCIAL_LINKS, BANNER_IMAGES, PROFILE_NAME } from './constants';
 import SocialButton from './components/SocialButton';
@@ -14,8 +15,8 @@ const App: React.FC = () => {
 
   return (
     <main className="min-h-screen w-full flex flex-col items-center bg-[#050505] pb-24">
-      {/* Banner Section - Increased height slightly to satisfy request */}
-      <div className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
+      {/* Banner Section - Reduced height for better balance */}
+      <div className="relative w-full h-[45vh] md:h-[50vh] overflow-hidden">
         {BANNER_IMAGES.map((img, index) => (
           <div
             key={img}
@@ -32,34 +33,34 @@ const App: React.FC = () => {
             />
           </div>
         ))}
-        {/* Premium blend - slightly lighter gradient to preserve image naturality */}
+        {/* Premium blend */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-[#050505]"></div>
       </div>
 
-      {/* Profile Header - Adjusted negative margin for the slightly larger banner */}
-      <div className="flex flex-col items-center z-10 px-4 -mt-28 mb-20 text-center">
-        {/* Name - font-bold for impact. Added mb-3 for a slight gap. */}
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.5em] text-white mb-3 uppercase drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]">
+      {/* Profile Header - Adjusted size and margin for elegance */}
+      <div className="flex flex-col items-center z-10 px-4 -mt-20 mb-16 text-center">
+        {/* Name - Slightly smaller as requested for a cleaner look */}
+        <h1 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-[0.5em] text-white mb-3 uppercase drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]">
           {PROFILE_NAME}
         </h1>
         
-        {/* Official Links Text - Font size maintained, gap slightly increased from the name above */}
+        {/* Official Links Text */}
         <div className="flex items-center justify-center opacity-40">
-          <p className="text-[11px] md:text-[12px] uppercase tracking-[0.6em] text-zinc-100 font-medium">
+          <p className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] text-zinc-100 font-medium">
             Official Links
           </p>
         </div>
       </div>
 
-      {/* Links Section - Spaced further down from header */}
-      <div className="w-full max-w-[400px] flex flex-col gap-6 px-6">
+      {/* Links Section */}
+      <div className="w-full max-w-[400px] flex flex-col gap-5 px-6">
         {SOCIAL_LINKS.map((link) => (
           <SocialButton key={link.id} link={link} />
         ))}
       </div>
 
       {/* Premium Footer */}
-      <footer className="mt-32 opacity-15 text-center">
+      <footer className="mt-24 opacity-15 text-center">
         <div className="flex justify-center gap-3 mb-8">
           <div className="w-1 h-1 rounded-full bg-zinc-500"></div>
           <div className="w-1 h-1 rounded-full bg-zinc-500"></div>
